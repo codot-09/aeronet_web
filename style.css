@@ -123,23 +123,112 @@ a {
     text-align: center;
     align-items: center;
     justify-content: center;
-    padding: 60px 40px;
-    background: linear-gradient(180deg, #fff 0%, #fbfbfd 100%);
+    padding: 100px 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px 60px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
 }
 
 .hero-block h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -2px;
+    font-size: 6rem;
+    font-weight: 800;
+    letter-spacing: -3px;
     background: linear-gradient(180deg, #1d1d1f 0%, #424245 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 0;
+    margin: 0 0 10px 0;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+
+.hero-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background: #0071e3;
+    box-shadow: 0 10px 20px rgba(0, 113, 227, 0.3);
+}
+
+.hero-btn:hover {
+    box-shadow: 0 15px 30px rgba(0, 113, 227, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Drone Animations */
+.drone {
+    position: absolute;
+    z-index: 2;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
+    pointer-events: none;
+}
+
+.drone-1 {
+    width: 600px;
+    top: -50px;
+    left: -400px;
+    z-index: 5;
+    /* Behind content (z-index 10) */
+    animation: flyInLeft 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.2s;
+    opacity: 0.9;
+}
+
+.drone-2 {
+    width: 500px;
+    bottom: -50px;
+    right: -400px;
+    z-index: 15;
+    /* In front of content */
+    animation: flyInRight 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes flyInLeft {
+    0% {
+        left: -400px;
+        transform: rotate(-15deg) scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        left: -50px;
+        transform: rotate(10deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes flyInRight {
+    0% {
+        right: -400px;
+        transform: rotate(15deg) scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        right: -80px;
+        transform: rotate(-5deg) scale(1);
+        opacity: 1;
+    }
+}
+
 
 .hero-block p.company-desc {
     font-size: 1.5rem;
@@ -150,55 +239,7 @@ a {
     line-height: 1.4;
 }
 
-/* Presentation Block */
-.presentation-block {
-    grid-column: span 12;
-    padding: 0;
-    height: 600px;
-    overflow: hidden;
-    background: #000;
-    position: relative;
-}
 
-.presentation-block iframe {
-    border: none;
-    width: 100%;
-    height: 100%;
-}
-
-.presentation-block .fullscreen-btn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.presentation-block .fullscreen-btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1);
-}
-
-.presentation-block:fullscreen {
-    padding: 0;
-    border-radius: 0;
-}
-
-.presentation-block:fullscreen iframe {
-    height: 100vh;
-}
 
 .nutri-block {
     grid-column: span 6;
