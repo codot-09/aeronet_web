@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AERONET - Qo'llab-quvvatlash</title>
+    <meta name="description" content="AERONET qo'llab-quvvatlash markazi. Savollaringizga javob oling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">AERONET</a>
+            <div class="nav-links">
+                <a href="index.html#projects">Loyihalar</a>
+                <a href="#contact">Aloqa</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+
+            <!-- Title -->
+            <div class="page-header">
+                <h1>Yordam Markazi</h1>
+                <p>Ko'p so'raladigan savollar va aloqa malumotlari</p>
+            </div>
+
+            <div class="bento-grid">
+
+                <!-- FAQ Block -->
+                <div class="bento-item faq-block scroll-reveal">
+                    <h2>Ko'p so'raladigan savollar</h2>
+
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                Malumotlarimni himoyalash
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sizning shaxsiy ma'lumotlaringiz xalqaro xavfsizlik standartlariga muvofiq
+                                    himoyalangan. Biz ma'lumotlarni shifrlangan holda saqlaymiz va uchinchi shaxslarga
+                                    bermaymiz. Maxfiylik siyosatimiz foydalanuvchi xavfsizligini ta'minlashga
+                                    qaratilgan.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                Dron orqali yetkazib berish qanday ishlaydi?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Buyurtma berilgach, bizning tizimimiz eng yaqin dronni aniqlaydi va yukni ortadi.
+                                    Dron GPS va maxsus sensorlar yordamida avtomatik ravishda belgilangan manzilga
+                                    xavfsiz uchib boradi va yukni tushiradi.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                NutriAI ilovasini qanday yuklab olsam bo'ladi?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>NutriAI ilovasini bizning rasmiy veb-saytimizning bosh sahifasidan to'g'ridan-to'g'ri
+                                    yuklab olishingiz mumkin. Hozirda ilova Android tizimlari uchun mavjud (APK
+                                    formatida).</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                Loopa Market orqali to'lovlar xavfsizmi?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Ha, albatta. Loopa Market Telegram ekotizimida ishlaydi va barcha to'lovlar rasmiy
+                                    to'lov provayderlari (Click, Payme va boshqalar) orqali himoyalangan kanallar orqali
+                                    amalga oshiriladi.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                Texnik yordam bilan qanday bog'lanish mumkin?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Bizning qo'llab-quvvatlash jamoamiz bilan ushbu sahifaning pastki qismidagi aloqa
+                                    ma'lumotlari orqali, email yoki telefon orqali bog'lanishingiz mumkin. Biz
+                                    24/7izmatdamiz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Block (Reused) -->
+                <div class="bento-item contact-block scroll-reveal delay-2" id="contact">
+                    <h3>Bog'lanish</h3>
+                    <div class="contact-links">
+                        <a href="mailto:support@aeronet.cam" class="contact-link">
+                            <i class="fas fa-envelope"></i> onabiyev321@gmail.com
+                        </a>
+                        <a href="tel:+998916368424" class="contact-link">
+                            <i class="fas fa-phone"></i> +998 91 636 84 24
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 AERONET Inc. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple script for FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
