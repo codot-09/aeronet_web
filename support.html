@@ -20,9 +20,16 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="logo">AERONET</a>
-            <div class="nav-links">
-                <a href="/#projects">Loyihalar</a>
-                <a href="#contact">Aloqa</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menyuni ochish" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-menu">
+                <a href="/#projects" class="nav-link">Loyihalar</a>
+                <a href="#contact" class="nav-link">Aloqa</a>
+                <a href="/support" class="nav-link active">Yordam</a>
             </div>
         </div>
     </nav>
@@ -33,7 +40,7 @@
             <!-- Title -->
             <div class="page-header">
                 <h1>Yordam Markazi</h1>
-                <p>Ko'p so'raladigan savollar va aloqa malumotlari</p>
+                <p>Ko'p so'raladigan savollar, shu jumladan OreonAI haqida savollarga ham javob toping.</p>
             </div>
 
             <div class="bento-grid">
@@ -82,6 +89,18 @@
 
                         <div class="faq-item">
                             <button class="faq-question">
+                                OreonAI nima va qanday ishlaydi?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>OreonAI bizneslar uchun avtonom AI agentlarni boshqaruvchi hamkorlik platformasidir.
+                                    U agentlarni muammolarni aniqlash, ish jarayonlarini muvofiqlashtirish va harakatlarni
+                                    avtomatlashtirish uchun ishlatadi.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
                                 Loopa Market orqali to'lovlar xavfsizmi?
                                 <i class="fas fa-chevron-down"></i>
                             </button>
@@ -104,6 +123,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="bento-item request-block scroll-reveal delay-2" id="request">
+                    <h3>So'rov qoldiring</h3>
+                    <p>OreonAI yoki AERONET xizmatlari bo'yicha qo'shimcha savollaringizni yuboring.</p>
+                    <form id="waitlist-form" class="request-form">
+                        <label>
+                            Kontakt (Email yoki telefon)
+                            <input type="text" name="contact" required placeholder="example@mail.com yoki +998901234567">
+                        </label>
+                        <button type="submit" class="btn btn-blue">Yuborish</button>
+                        <p class="form-status" id="waitlist-message"></p>
+                    </form>
                 </div>
 
                 <!-- Contact Block (Reused) -->

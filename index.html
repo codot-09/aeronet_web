@@ -21,10 +21,17 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="logo">AERONET</a>
-            <div class="nav-links">
-                <a href="#projects">Loyihalar</a>
-                <a href="#contact">Aloqa</a>
-                <a href="/support">Yordam</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menyuni ochish" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-menu">
+                <a href="#projects" class="nav-link">Loyihalar</a>
+                <a href="#contact" class="nav-link">Aloqa</a>
+                <a href="/support" class="nav-link">Yordam</a>
+                <a href="#request" class="btn btn-blue btn-sm nav-cta">So'rov qoldirish</a>
             </div>
         </div>
     </nav>
@@ -40,12 +47,53 @@
                     <img src="assets/images/drone1.png" alt="" class="drone drone-1">
                     <img src="assets/images/drone2.png" alt="" class="drone drone-2">
                     <div class="hero-content">
+                        <p class="hero-eyebrow">Aqlli logistika va AI mahsulotlari</p>
                         <h1>AERONET</h1>
-                        <p class="company-desc">O'zbekistonda dronlar orqali yetkazib berish tizimini yo'lga qo'yish.
-                        </p>
-                        <a href="assets/present.pdf" class="btn btn-blue hero-btn" download>
-                            Taqdimotni yuklab olish <i class="fas fa-download"></i>
-                        </a>
+                        <p class="company-desc">O'zbekistonda dron orqali yetkazib berish va AI-platformalarni
+                            biznesga joriy etamiz.</p>
+                        <div class="hero-actions">
+                            <a href="assets/present.pdf" class="btn btn-blue hero-btn" download>
+                                Taqdimotni yuklab olish <i class="fas fa-download"></i>
+                            </a>
+                            <a href="#projects" class="btn btn-dark hero-btn-secondary">
+                                Loyihalarni ko'rish <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <strong>3+</strong>
+                                <span>Asosiy mahsulot</span>
+                            </div>
+                            <div class="hero-stat">
+                                <strong>AI + Drone</strong>
+                                <span>Gibrid yechimlar</span>
+                            </div>
+                            <div class="hero-stat">
+                                <strong>24/7</strong>
+                                <span>Qo'llab-quvvatlash</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-item value-block scroll-reveal delay-1">
+                    <h3>Nima uchun AERONET</h3>
+                    <div class="value-list">
+                        <article class="value-item">
+                            <i class="fas fa-route"></i>
+                            <h4>Operatsion tezlik</h4>
+                            <p>Yetkazib berish va xizmat ko'rsatish jarayonlarini avtomatlashtiramiz.</p>
+                        </article>
+                        <article class="value-item">
+                            <i class="fas fa-microchip"></i>
+                            <h4>AI asosidagi qarorlar</h4>
+                            <p>Mahsulotlar real ma'lumotlarga asoslanib tavsiya va optimizatsiya beradi.</p>
+                        </article>
+                        <article class="value-item">
+                            <i class="fas fa-shield-halved"></i>
+                            <h4>Barqaror infratuzilma</h4>
+                            <p>Texnik qo'llab-quvvatlash va integratsiya jarayoni biznesga moslashadi.</p>
+                        </article>
                     </div>
                 </div>
 
@@ -81,6 +129,20 @@
                     </div>
                 </div>
 
+                <!-- OreonAI Block -->
+                <div id="projects" class="bento-item app-block oreon-block scroll-reveal delay-2">
+                    <div class="app-content">
+                        <div class="icon-box">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h2>OreonAI</h2>
+                        <p>Autonomus AI agent coworking orchestratsiyasi bizneslar uchun.</p>
+                        <a href="https://oreon.aeronet.cam" target="_blank" class="btn btn-sm btn-blue">
+                            Veb-saytga o'tish <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Social Networks Block -->
                 <div class="bento-item social-block scroll-reveal delay-3">
                     <h3>Ijtimoiy Tarmoqlar</h3>
@@ -107,6 +169,20 @@
                             <i class="fas fa-phone"></i> +998 91 636 84 24
                         </a>
                     </div>
+                </div>
+
+                <!-- Request Block -->
+                <div class="bento-item request-block scroll-reveal delay-3" id="request">
+                    <h3>So'rov qoldiring</h3>
+                    <p>Biz bilan bog'laning va OreonAI yoki boshqa xizmatlar bo'yicha ma'lumot oling.</p>
+                    <form id="waitlist-form" class="request-form">
+                        <label>
+                            Kontakt (Email yoki telefon)
+                            <input type="text" name="contact" required placeholder="example@mail.com yoki +998901234567">
+                        </label>
+                        <button type="submit" class="btn btn-blue">Yuborish</button>
+                        <p class="form-status" id="waitlist-message"></p>
+                    </form>
                 </div>
 
             </div>
